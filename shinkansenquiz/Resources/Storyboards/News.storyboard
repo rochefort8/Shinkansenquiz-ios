@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KeE-NA-eio">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="Jar-Tk-9I9">
+            <objects>
+                <navigationController storyboardIdentifier="News" definesPresentationContext="YES" id="KeE-NA-eio" userLabel="News" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="お知らせ" image="Icon_news" id="7Mu-Pw-6Ra" userLabel="一覧"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yaY-b6-HjO">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.95634075129999996" green="0.95634075129999996" blue="0.95634075129999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.53333333329999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hYc-HN-oGd" kind="relationship" relationship="rootViewController" id="q6E-hi-HTl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSz-Xl-Y2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="-58"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="dl4-SB-W7T">
+            <objects>
+                <viewController id="hYc-HN-oGd" userLabel="News" customClass="NewsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BcE-Ji-nhQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="V5r-wj-5zj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BV0-CC-Mla">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LEd-Mg-QQ2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="dmY-hE-1pl" customClass="UIRefreshControl">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="59"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="onRefresh:" destination="hYc-HN-oGd" eventType="valueChanged" id="qYP-rC-ff5"/>
+                                    </connections>
+                                </view>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LEd-Mg-QQ2" secondAttribute="bottom" id="PNm-M9-i4a"/>
+                            <constraint firstItem="LEd-Mg-QQ2" firstAttribute="leading" secondItem="BV0-CC-Mla" secondAttribute="leading" id="QGs-Cf-Aag"/>
+                            <constraint firstItem="LEd-Mg-QQ2" firstAttribute="top" secondItem="BV0-CC-Mla" secondAttribute="top" id="Xx8-Vm-ohh"/>
+                            <constraint firstAttribute="trailing" secondItem="LEd-Mg-QQ2" secondAttribute="trailing" id="lcC-6B-KZh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="お知らせ" id="it4-lj-C1H" userLabel="一覧">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="ItR-Mg-9x4"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="LEd-Mg-QQ2" id="429-tt-3kW"/>
+                        <segue destination="blC-qj-PLe" kind="push" identifier="toNewsDetailView" id="Bbq-Ay-j61"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fg8-YJ-gZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="-14"/>
+        </scene>
+        <!--ニュース-->
+        <scene sceneID="bHO-zh-IVh">
+            <objects>
+                <viewController id="blC-qj-PLe" customClass="NewsFullViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2CO-7X-Fay"/>
+                        <viewControllerLayoutGuide type="bottom" id="MHp-3N-2r5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hUo-Or-Ixc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-od-g78">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6w1-od-g78" firstAttribute="top" secondItem="hUo-Or-Ixc" secondAttribute="top" id="DoZ-TN-wcf"/>
+                            <constraint firstItem="6w1-od-g78" firstAttribute="leading" secondItem="hUo-Or-Ixc" secondAttribute="leading" id="Hgg-fX-tWm"/>
+                            <constraint firstItem="MHp-3N-2r5" firstAttribute="top" secondItem="6w1-od-g78" secondAttribute="bottom" id="MnP-lG-gjv"/>
+                            <constraint firstAttribute="trailing" secondItem="6w1-od-g78" secondAttribute="trailing" id="wtX-9g-clp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ニュース" id="mdr-Rx-Uhv"/>
+                    <connections>
+                        <outlet property="tableView" destination="6w1-od-g78" id="2TV-US-xiv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FF-lA-vmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="601" y="-6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon_news" width="20" height="20"/>
+    </resources>
+</document>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WNi-0U-ukP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--PhotoRelay-->
+        <scene sceneID="vg9-yI-L72">
+            <objects>
+                <navigationController storyboardIdentifier="PhotoRelay" definesPresentationContext="YES" id="WNi-0U-ukP" userLabel="PhotoRelay" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="投稿" image="Icon_photorelay" id="xeH-bH-pte"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pEd-Vp-w7j">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.53333333329999999" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ge8-Ea-C9I" kind="relationship" relationship="rootViewController" id="Kwa-75-8Hz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUl-5m-Oug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-375" y="-6"/>
+        </scene>
+        <!--投稿-->
+        <scene sceneID="teT-SO-VAX">
+            <objects>
+                <tableViewController id="Ge8-Ea-C9I" customClass="PAPHomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ViC-Uk-U5W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Ge8-Ea-C9I" id="Mph-X3-o0N"/>
+                            <outlet property="delegate" destination="Ge8-Ea-C9I" id="NuJ-Zt-jUJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="投稿" id="XFH-3Q-jC0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvc-1g-3X5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15" y="-6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon_photorelay" width="20" height="20"/>
+    </resources>
+</document>

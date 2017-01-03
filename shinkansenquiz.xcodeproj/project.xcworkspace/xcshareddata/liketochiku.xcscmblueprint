@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ED41A090BEC20CE5DAAEF6A2FB5D9C2CCF352CE3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ED41A090BEC20CE5DAAEF6A2FB5D9C2CCF352CE3" : 0,
+    "E7E098A26C2B00ABC2F05A96AFFA6190CE3D4E40" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6DDF02A2-E4AF-4678-8AB0-CFC9EA578F05",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ED41A090BEC20CE5DAAEF6A2FB5D9C2CCF352CE3" : "VivaBelgianBeer-ios\/",
+    "E7E098A26C2B00ABC2F05A96AFFA6190CE3D4E40" : "LikeTochiku-ios"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "shinkansenquiz",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "shinkansenquiz.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rochefort8\/LikeTochiku-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E7E098A26C2B00ABC2F05A96AFFA6190CE3D4E40"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rochefort8\/LikeTochiku-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ED41A090BEC20CE5DAAEF6A2FB5D9C2CCF352CE3"
+    }
+  ]
+}

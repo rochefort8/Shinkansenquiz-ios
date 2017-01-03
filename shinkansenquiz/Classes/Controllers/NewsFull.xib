@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="413" id="eFm-6T-cM9" customClass="NewsFullCell">
+            <rect key="frame" x="0.0" y="0.0" width="362" height="413"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eFm-6T-cM9" id="igH-xa-SAT">
+                <rect key="frame" x="0.0" y="0.0" width="362" height="412.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="302" translatesAutoresizingMaskIntoConstraints="NO" id="iFX-62-for">
+                        <rect key="frame" x="28" y="8" width="306" height="24"/>
+                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="24"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Content" translatesAutoresizingMaskIntoConstraints="NO" id="i7N-GJ-hg0">
+                        <rect key="frame" x="10" y="42" width="342" height="43"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="18"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xy8-Tu-aFj">
+                        <rect key="frame" x="0.0" y="95" width="362" height="317"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xy8-Tu-aFj" secondAttribute="bottom" priority="250" id="1lJ-oT-whn"/>
+                    <constraint firstAttribute="trailing" secondItem="xy8-Tu-aFj" secondAttribute="trailing" id="9mY-Oa-ncd"/>
+                    <constraint firstItem="xy8-Tu-aFj" firstAttribute="leading" secondItem="igH-xa-SAT" secondAttribute="leading" id="Bex-u0-o6T"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iFX-62-for" secondAttribute="trailing" constant="20" id="EoM-nV-DML"/>
+                    <constraint firstItem="i7N-GJ-hg0" firstAttribute="top" secondItem="iFX-62-for" secondAttribute="bottom" constant="10" id="KKc-iM-SRn"/>
+                    <constraint firstAttribute="trailing" secondItem="i7N-GJ-hg0" secondAttribute="trailing" constant="10" id="Qow-Ba-q95"/>
+                    <constraint firstItem="i7N-GJ-hg0" firstAttribute="leading" secondItem="igH-xa-SAT" secondAttribute="leading" constant="10" id="ZXZ-xc-fe1"/>
+                    <constraint firstItem="xy8-Tu-aFj" firstAttribute="top" secondItem="i7N-GJ-hg0" secondAttribute="bottom" constant="10" id="lFj-Uv-bps"/>
+                    <constraint firstItem="iFX-62-for" firstAttribute="leading" secondItem="igH-xa-SAT" secondAttribute="leadingMargin" constant="20" id="naV-Zu-7Rr"/>
+                    <constraint firstItem="iFX-62-for" firstAttribute="top" secondItem="igH-xa-SAT" secondAttribute="top" constant="8" id="uch-BC-B6B"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="newsContents" destination="i7N-GJ-hg0" id="Kga-Yo-QL3"/>
+                <outlet property="newsImage" destination="xy8-Tu-aFj" id="qJa-Lg-VCd"/>
+                <outlet property="newsTitle" destination="iFX-62-for" id="iB5-vf-XGm"/>
+            </connections>
+            <point key="canvasLocation" x="238" y="337.5"/>
+        </tableViewCell>
+    </objects>
+</document>
