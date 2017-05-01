@@ -13,6 +13,7 @@
 
 @property (nonatomic,retain) PFObject *object ;
 @property (nonatomic,retain) UIImage  *board_image ;
+@property (nonatomic,retain) UIImage  *map_image ;
 
 - (void)setObject:(PFObject*)data ;
 - (NSString*)getName ;
@@ -20,6 +21,7 @@
 - (NSString*)getName_kana ;
 
 - (UIImage*)getBoardImage ;
+- (UIImage*)getMapImage ;
 
 @end
 

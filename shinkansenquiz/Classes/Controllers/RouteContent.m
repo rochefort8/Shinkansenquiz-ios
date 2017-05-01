@@ -128,6 +128,20 @@
                         // FIXME !!
                         [self.stationContentList replaceObjectAtIndex:i withObject:content] ;
                     }];
+                    
+                    PFFile *map_image = [object objectForKey:@"map_image"];
+                    
+                    [map_image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                        if (!error){
+                            content.map_image = [UIImage imageWithData:data];
+                        } else {
+                            NSLog(@"no data!");
+                        }
+                        // FIXME !!
+                        [self.stationContentList replaceObjectAtIndex:i withObject:content] ;
+                    }];
+                    
+                    
                 }
             } else {
                 NSLog(@"[stationList] No updates found.") ;

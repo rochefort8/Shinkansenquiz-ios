@@ -71,6 +71,7 @@ int answers[NUMBER_OF_ANSWERS] ;
     
     self.navigationItem.title = [station getName_kanji] ;
     self.boardImage.image = [station getBoardImage ] ;
+    self.mapImage.image = [station getMapImage];
     
     //
     
@@ -138,6 +139,7 @@ int answers[NUMBER_OF_ANSWERS] ;
     
     self.navigationItem.title = [station getName_kanji] ;
     self.boardImage.image = [station getBoardImage ] ;
+    self.mapImage.image = [station getMapImage];
     
     self.currentPosition = 0;
     self.answer1Button.hidden = YES ;

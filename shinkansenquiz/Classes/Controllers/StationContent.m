@@ -18,6 +18,7 @@
         // Initialize Queue
         self.object = NULL ;
         self.board_image = NULL ;
+        self.map_image = NULL ;
     }
     return self;
 }
@@ -40,6 +41,10 @@
 
 - (UIImage*)getBoardImage {
     return self.board_image ;
+}
+
+- (UIImage*)getMapImage {
+    return self.map_image ;
 }
 
 @end
